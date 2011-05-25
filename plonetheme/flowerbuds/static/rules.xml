@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css">
+
+    <theme href="index.html" />
+    <notheme if-path="presentation_view"/>
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+
+<!--  resources -->
+    <replace theme="/html/head/title" content="/html/head/title"/>
+    <drop css:theme="meta"/>
+    <before content='/html/head' theme='/html/head' />
+    <copy attributes="class" css:content="body" css:theme="body" />
+    <copy attributes="id dir" css:content="body" css:theme="body" />
+
+<!-- MENU -->
+    <replace css:theme="#menu ul" css:content="#portal-globalnav"/>
+    <drop attributes="id" css:content="#portal-globalnav"/>
+
+<!-- SIDE BAR -->
+    <drop css:theme="#sidebar ul"/>
+    <append css:content='#portal-column-one .portletWrapper' css:theme='#sidebar' />
+    <append css:content='#portal-column-one .managePortletsLink' css:theme='#sidebar' />
+    <append css:content='#portletmanager-plone-rightcolumn' css:theme='#sidebar' />
+    <append css:content='#portlet-prefs' css:theme="#sidebar"/>
+
+    <drop css:theme=".post"/>
+    <replace css:theme="#content" css:content="#content"/>
+    <replace css:theme-children="#footer" css:content-children="#portal-footer"/>
+    <drop css:content="h5.hiddenStructure"/>
+    <append css:content='#portal-personaltools-wrapper' css:theme='#menu' />
+<!--     <append css:content='#portal-languageselector' css:theme='#portal-header' /> -->
+
+<!--     <append css:content="#viewlet-above-content" css:theme="#mppbody" /> -->
+<!--     <append css:content='#content' css:theme='#mppbody' /> -->
+<!--     <append css:content="#viewlet-below-content" css:theme="#mppbody" /> -->
+
+<!--     <append css:content='#portal-column-two .portletWrapper' css:theme='#mppcolumn' /> -->
+<!--     <append css:content='#portal-column-two .managePortletsLink' css:theme='#mppcolumn' /> -->
+<!--     <append css:content='#portletmanager-plone-rightcolumn' css:theme='#mppcolumn' /> -->
+<!--     <append css:content='#portlet-prefs' css:theme="#mppcolumn"/> -->
+
+<!--     <prepend css:content="#portal-siteactions" css:theme="#mppfooter"/> -->
+
+</rules>
