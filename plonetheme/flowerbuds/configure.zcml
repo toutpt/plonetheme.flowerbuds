@@ -18,7 +18,7 @@
   <!-- -*- extra stuff goes here -*- -->
   <plone:static
     type="theme"
-    directory="static"
+    directory="theme/flowerbuds"
     name="flowerbuds"
     />
 </configure>
