@@ -1,0 +1,12 @@
+#sidebar li{display:block;}
+#livesearch0 input{height:25px;}
+#livesearch0 .searchField{width:220px;}
+#livesearch0 .searchButton{height:30px;}
+dl.portlet dt, div.portletAssignments .portletHeader {
+  background-color:transparent;
+  font-size:2em;
+  color:#fff;
+  font-weight: bold;
+}
+#sidebar .portletHeader a{color:#fff}
+dl.portlet{font-size:12px;}
