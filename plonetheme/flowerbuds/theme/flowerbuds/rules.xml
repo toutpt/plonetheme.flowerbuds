@@ -34,7 +34,8 @@
     <prepend css:theme="#fcontent" css:content="#viewlet-above-content" />
     <prepend css:theme="#fcontent" css:content="#content"/>
     <prepend css:theme="#fcontent" css:content="#viewlet-below-content" />
-    <rules css:if-content="body.template-search,body.template-overview-controlpanel">
+
+    <rules css:if-content="body.template-search,body.template-search_form,body.template-overview-controlpanel">
         <replace css:theme-children="#page" css:content="#viewlet-above-content" />
         <append css:theme="#page" css:content="#content"/>
         <append css:theme="#page" css:content="#viewlet-below-content" />
