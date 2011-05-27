@@ -24,7 +24,7 @@
     <drop css:theme="#sidebar ul"/>
     <append css:content='#portal-column-one .portletWrapper' css:theme='#sidebar' />
     <append css:content='#portal-column-one .managePortletsLink' css:theme='#sidebar' />
-    <append css:content='#portletmanager-plone-rightcolumn' css:theme='#sidebar' />
+    <append css:content='#portletmanager-plone-leftcolumn' css:theme='#sidebar' />
     <append css:content='#portlet-prefs' css:theme="#sidebar"/>
 
 <!--  CONTENT -->
