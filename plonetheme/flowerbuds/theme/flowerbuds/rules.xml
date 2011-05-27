@@ -27,22 +27,25 @@
     <append css:content='#portletmanager-plone-rightcolumn' css:theme='#sidebar' />
     <append css:content='#portlet-prefs' css:theme="#sidebar"/>
 
+<!--  CONTENT -->
     <drop css:theme=".post"/>
-    <replace css:theme="#content" css:content="#content"/>
+    <prepend css:theme="#page-bgbtm" css:content="#edit-bar" />
+    <prepend css:theme="#fcontent" css:content=".portalMessage" />
+    <prepend css:theme="#fcontent" css:content="#viewlet-above-content" />
+    <prepend css:theme="#fcontent" css:content="#content"/>
+    <prepend css:theme="#fcontent" css:content="#viewlet-below-content" />
+    <rules css:if-content="body.template-search,body.template-overview-controlpanel">
+        <replace css:theme-children="#page" css:content="#viewlet-above-content" />
+        <append css:theme="#page" css:content="#content"/>
+        <append css:theme="#page" css:content="#viewlet-below-content" />
+    </rules>
+    
+<!-- FOOTER -->
     <replace css:theme-children="#footer" css:content-children="#portal-footer"/>
-    <drop css:content="h5.hiddenStructure"/>
+    <append css:content="#portal-siteactions" css:theme="#footer"/>
+
+<!--  TOOLS -->
     <append css:content='#portal-personaltools-wrapper' css:theme='#menu' />
-<!--     <append css:content='#portal-languageselector' css:theme='#portal-header' /> -->
-
-<!--     <append css:content="#viewlet-above-content" css:theme="#mppbody" /> -->
-<!--     <append css:content='#content' css:theme='#mppbody' /> -->
-<!--     <append css:content="#viewlet-below-content" css:theme="#mppbody" /> -->
-
-<!--     <append css:content='#portal-column-two .portletWrapper' css:theme='#mppcolumn' /> -->
-<!--     <append css:content='#portal-column-two .managePortletsLink' css:theme='#mppcolumn' /> -->
-<!--     <append css:content='#portletmanager-plone-rightcolumn' css:theme='#mppcolumn' /> -->
-<!--     <append css:content='#portlet-prefs' css:theme="#mppcolumn"/> -->
-
-<!--     <prepend css:content="#portal-siteactions" css:theme="#mppfooter"/> -->
+    <drop css:content="h5.hiddenStructure"/>
 
 </rules>

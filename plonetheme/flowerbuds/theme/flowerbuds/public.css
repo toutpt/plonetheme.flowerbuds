@@ -1,3 +1,4 @@
+/*OVERRIDE OF plone's public.css*/
 #sidebar li{display:block;}
 #livesearch0 input{height:25px;}
 #livesearch0 .searchField{width:220px;}
@@ -10,3 +11,8 @@ dl.portlet dt, div.portletAssignments .portletHeader {
 }
 #sidebar .portletHeader a{color:#fff}
 dl.portlet{font-size:12px;}
+#portal-personaltools,
+#portal-personaltools dd{background-color:transparent;}
+#content h1,
+#content h2{color:White;}
+#content a:link, dl.portlet a:link {border:none;}
